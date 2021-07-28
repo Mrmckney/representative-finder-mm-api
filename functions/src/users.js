@@ -15,6 +15,6 @@ exports.createUser = (req, res) => {
 
     db.collection('users')
         .add(req.body)
-        .then(docRef => res.send(docRef.id))
+        .then(docRef => res.send({id: docRef.id}))
         .catch(err => res.status(500).send('User could not be created'))
 }
