@@ -4,8 +4,8 @@ const cors = require('cors');
 const {createUser} = require('./src/users')
 
 const app = express()
-app.use(cors)
 app.use(express.json())
+app.use(cors())
 
 app.post('/users', createUser)
 
