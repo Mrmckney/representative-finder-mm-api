@@ -6,6 +6,6 @@ const app = express()
 app.use(cors)
 app.use(express.json())
 
-
+app.post('/users', createUser)
 
 exports.app = functions.https.onRequest(app)
